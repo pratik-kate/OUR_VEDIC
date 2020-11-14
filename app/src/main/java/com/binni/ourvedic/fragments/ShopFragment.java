@@ -4,6 +4,8 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.Toast;
 
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.GridLayoutManager;
@@ -46,6 +48,9 @@ public class ShopFragment extends Fragment {
         GridLayoutManager layout = new GridLayoutManager(getContext(),2);
         list.setLayoutManager(layout);
 
+
         return view;
     }
+
+
 }
