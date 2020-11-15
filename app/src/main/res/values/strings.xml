@@ -12,4 +12,14 @@
     <string name="image">image</string>
     <string name="textview">TextView</string>
     <string name="hindu">Hindu</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="contact">Contact</string>
+    <string name="about">about</string>
+    <string name="aboutdes">This App is about providing things needed in pooja from pandit to samagri each and everything for each and every religion</string>
+    <string name="islam">Islam</string>
+    <string name="christan">Christan</string>
+    <string name="sikh">Sikh</string>
+    <string name="buddh">Buddh</string>
+    <string name="jain">Jain</string>
 </resources>

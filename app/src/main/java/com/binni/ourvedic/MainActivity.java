@@ -1,6 +1,5 @@
 package com.binni.ourvedic;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -9,11 +8,11 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.FragmentTransaction;
 
 import android.os.Bundle;
-import android.view.MenuItem;
 import android.widget.Toast;
 
 import com.binni.ourvedic.fragments.CartFragment;
-import com.binni.ourvedic.fragments.ShareFragment;
+import com.binni.ourvedic.fragments.AboutFragment;
+import com.binni.ourvedic.fragments.ContactFragment;
 import com.binni.ourvedic.fragments.ShopFragment;
 import com.google.android.material.navigation.NavigationView;
 
@@ -57,21 +56,31 @@ public class MainActivity extends AppCompatActivity {
                     dl.closeDrawer(GravityCompat.START);
                     break;
                 case R.id.cart:
-                    CartFragment feed = new CartFragment();
+                    CartFragment cart = new CartFragment();
                     FragmentTransaction transaction1 = getSupportFragmentManager().beginTransaction();
-                    transaction1.replace(R.id.screen, feed);
+                    transaction1.replace(R.id.screen, cart);
                     transaction1.commit();
 
                     Toast.makeText(MainActivity.this, "cart", Toast.LENGTH_SHORT).show();
                     dl.closeDrawer(GravityCompat.START);
                     break;
-                case R.id.share:
-                    ShareFragment settings = new ShareFragment();
+                case R.id.about:
+                    AboutFragment about = new AboutFragment();
                     FragmentTransaction transaction3 = getSupportFragmentManager().beginTransaction();
-                    transaction3.replace(R.id.screen, settings);
+                    transaction3.replace(R.id.screen, about);
                     transaction3.commit();
 
-                    Toast.makeText(MainActivity.this, "share", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MainActivity.this, "about", Toast.LENGTH_SHORT).show();
+                    dl.closeDrawer(GravityCompat.START);
+                    break;
+
+                case R.id.contact:
+                    ContactFragment contact = new ContactFragment();
+                    FragmentTransaction transaction4 = getSupportFragmentManager().beginTransaction();
+                    transaction4.replace(R.id.screen, contact);
+                    transaction4.commit();
+
+                    Toast.makeText(MainActivity.this, "contact", Toast.LENGTH_SHORT).show();
                     dl.closeDrawer(GravityCompat.START);
                     break;
             }

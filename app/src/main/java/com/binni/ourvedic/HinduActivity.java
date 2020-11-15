@@ -28,13 +28,13 @@ public class HinduActivity extends AppCompatActivity {
 
 
         items.add(new HinduModel(R.drawable.fruits,"Fruits"));
-        items.add(new HinduModel(R.drawable.dhoop,"dhup"));
+        items.add(new HinduModel(R.drawable.dhoop,"Dhup"));
         items.add(new HinduModel(R.drawable.agarbatti,"AgarBatti"));
         items.add(new HinduModel(R.drawable.gulabjal,"GulabJal"));
-        items.add(new HinduModel(R.drawable.kumkum,"kumkum"));
+        items.add(new HinduModel(R.drawable.kumkum,"Kumkum"));
         items.add(new HinduModel(R.drawable.nariyal,"Nariyal"));
         items.add(new HinduModel(R.drawable.camphor,"Camphor"));
-        items.add(new HinduModel(R.drawable.diya,"Diya"));
+       // items.add(new HinduModel(R.drawable.diya,"Diya"));
         items.add(new HinduModel(R.drawable.flowers,"Flowers"));
 
 
@@ -45,13 +45,13 @@ public class HinduActivity extends AppCompatActivity {
         HinduAdapter adapter = new HinduAdapter(items,HinduActivity.this);
         list.setAdapter(adapter);
 
-
-        LinearLayoutManager layout = new LinearLayoutManager(HinduActivity.this);
-        list.setLayoutManager(layout);
-
 //
-//        GridLayoutManager layout = new GridLayoutManager(HinduActivity.this,2);
+//        LinearLayoutManager layout = new LinearLayoutManager(HinduActivity.this);
 //        list.setLayoutManager(layout);
+
+
+        GridLayoutManager layout = new GridLayoutManager(HinduActivity.this,2);
+        list.setLayoutManager(layout);
 
     }
 }

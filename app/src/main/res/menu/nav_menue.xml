@@ -13,9 +13,12 @@
         android:title="@string/your_cart" />
 
     <item
-        android:id="@+id/share"
-        android:icon="@drawable/ic_baseline_share_24"
-        android:title="@string/share" />
+        android:id="@+id/about"
+        android:icon="@drawable/ic_baseline_info_24"
+        android:title="About" />
 
-
+    <item
+        android:id="@+id/contact"
+        android:icon="@drawable/ic_baseline_contact_support_24"
+        android:title="Contact" />
 </menu>

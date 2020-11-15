@@ -13,22 +13,22 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+import androidx.recyclerview.widget.RecyclerView.ViewHolder;
 
 
-import com.binni.ourvedic.Models.HinduModel;
-
+import com.binni.ourvedic.Models.IslamModel;
 import com.binni.ourvedic.R;
 
 import java.util.ArrayList;
 
-public class HinduAdapter extends RecyclerView.Adapter<HinduAdapter.viewHolder>{
+public class IslamAdapter extends RecyclerView.Adapter<IslamAdapter.viewHolder>{
 
 
-    ArrayList<HinduModel> list;
+    ArrayList<IslamModel> list;
     Context context;
 
 
-    public HinduAdapter(ArrayList<HinduModel> list, Context context) {
+    public IslamAdapter(ArrayList<IslamModel> list, Context context) {
         this.list = list;
         this.context = context;
 
@@ -49,8 +49,8 @@ public class HinduAdapter extends RecyclerView.Adapter<HinduAdapter.viewHolder>{
     }
 
     @Override
-    public void onBindViewHolder(@NonNull viewHolder holder, int position) {
-        HinduModel model = list.get(position);
+    public void onBindViewHolder(@NonNull IslamAdapter.viewHolder holder, int position) {
+        IslamModel model = list.get(position);
 
         holder.image.setImageResource(model.getImage());
         holder.text.setText(model.getText());
@@ -69,7 +69,7 @@ public class HinduAdapter extends RecyclerView.Adapter<HinduAdapter.viewHolder>{
                         //TO-DO
                         Toast.makeText(context, model.getText() +" added", Toast.LENGTH_SHORT).show();
                     });
-                    builder.setNegativeButton("No", (dialog, which) -> builder.setOnCancelListener(dialog19 -> {
+                    builder.setNegativeButton("No", (dialog, which) -> builder.setOnCancelListener(dialog15 -> {
                         //by clicking no the alert box will disappear
                         //done
                     }));
@@ -88,7 +88,7 @@ public class HinduAdapter extends RecyclerView.Adapter<HinduAdapter.viewHolder>{
                         //TO-DO
                         Toast.makeText(context, model.getText() +" added", Toast.LENGTH_SHORT).show();
                     });
-                    builder1.setNegativeButton("No", (dialog, which) -> builder1.setOnCancelListener(dialog18 -> {
+                    builder1.setNegativeButton("No", (dialog, which) -> builder1.setOnCancelListener(dialog14 -> {
                         //by clicking no the alert box will disappear
                         //done
                     }));
@@ -106,7 +106,7 @@ public class HinduAdapter extends RecyclerView.Adapter<HinduAdapter.viewHolder>{
                         //TO-DO
                         Toast.makeText(context, model.getText() +" added", Toast.LENGTH_SHORT).show();
                     });
-                    builder2.setNegativeButton("No", (dialog, which) -> builder2.setOnCancelListener(dialog17 -> {
+                    builder2.setNegativeButton("No", (dialog, which) -> builder2.setOnCancelListener(dialog13 -> {
                         //by clicking no the alert box will disappear
                         //done
                     }));
@@ -123,7 +123,7 @@ public class HinduAdapter extends RecyclerView.Adapter<HinduAdapter.viewHolder>{
                         //TO-DO
                         Toast.makeText(context, model.getText() +" added", Toast.LENGTH_SHORT).show();
                     });
-                    builder3.setNegativeButton("no", (dialog, which) -> builder3.setOnCancelListener(dialog16 -> {
+                    builder3.setNegativeButton("no", (dialog, which) -> builder3.setOnCancelListener(dialog12 -> {
                         //by clicking no the alert box will disappear
                         //done
                     }));
@@ -141,7 +141,7 @@ public class HinduAdapter extends RecyclerView.Adapter<HinduAdapter.viewHolder>{
                         //TO-DO
                         Toast.makeText(context, model.getText() +" added", Toast.LENGTH_SHORT).show();
                     });
-                    builder4.setNegativeButton("no", (dialog, which) -> builder4.setOnCancelListener(dialog15 -> {
+                    builder4.setNegativeButton("no", (dialog, which) -> builder4.setOnCancelListener(dialog1 -> {
                         //by clicking no the alert box will disappear
 
                     }));
@@ -151,80 +151,6 @@ public class HinduAdapter extends RecyclerView.Adapter<HinduAdapter.viewHolder>{
 
                     break;
 
-                case 5:
-                    AlertDialog.Builder builder5 = new AlertDialog.Builder(v.getContext());
-                    builder5.setTitle(model.getText());
-                    builder5.setMessage("you want to add this item in Cart");
-                    builder5.setPositiveButton("yes", (dialog, which) -> {
-                        //by clicking on yes button the selected item should be added to cart
-                        //TO-DO
-                        Toast.makeText(context, model.getText() +" added", Toast.LENGTH_SHORT).show();
-                    });
-                    builder5.setNegativeButton("no", (dialog, which) -> builder5.setOnCancelListener(dialog14 -> {
-                        //by clicking no the alert box will disappear
-                        //done
-                    }));
-                    AlertDialog alertDialog5 = builder5.create();
-                    alertDialog5.show();
-
-                    break;
-
-                case 6:
-
-                    AlertDialog.Builder builder6 = new AlertDialog.Builder(v.getContext());
-                    builder6.setTitle(model.getText());
-                    builder6.setMessage("You want to add this item in cart");
-                    builder6.setPositiveButton("Yes", (dialog, which) -> {
-                        //by clicking on yes button the selected item should be added to cart
-                        //TO-DO
-                        Toast.makeText(context, model.getText() +" added", Toast.LENGTH_SHORT).show();
-                    });
-                    builder6.setNegativeButton("No", (dialog, which) -> builder6.setOnCancelListener(dialog13 -> {
-                        //by clicking no the alert box will disappear
-                        //done
-                    }));
-                    AlertDialog alertDialog6 = builder6.create();
-                    alertDialog6.show();
-
-                    break;
-
-                case 7:
-
-                    AlertDialog.Builder builder7 = new AlertDialog.Builder(v.getContext());
-                    builder7.setTitle(model.getText());
-                    builder7.setMessage("You want to add this item in Cart");
-                    builder7.setPositiveButton("Yes", (dialog, which) -> {
-                        //by clicking on yes button the selected item should be added to cart
-                        //TO-DO
-                        Toast.makeText(context, model.getText() +" added", Toast.LENGTH_SHORT).show();
-                    });
-                    builder7.setNegativeButton("no", (dialog, which) -> builder7.setOnCancelListener(dialog12 -> {
-                        //by clicking no the alert box will disappear
-                        //done
-                    }));
-                    AlertDialog alertDialog7 = builder7.create();
-                    alertDialog7.show();
-
-                    break;
-
-                case 8:
-
-                    AlertDialog.Builder builder8 = new AlertDialog.Builder(v.getContext());
-                    builder8.setTitle(model.getText());
-                    builder8.setMessage("You want to add this item in Cart");
-                    builder8.setPositiveButton("yes", (dialog, which) -> {
-                        //by clicking on yes button the selected item should be added to cart
-                        //TO-DO
-                        Toast.makeText(context, model.getText() +" added", Toast.LENGTH_SHORT).show();
-                    });
-                    builder8.setNegativeButton("No", (dialog, which) -> builder8.setOnCancelListener(dialog1 -> {
-                        //by clicking no the alert box will disappear
-                        //done
-                    }));
-                    AlertDialog alertDialog8 = builder8.create();
-                    alertDialog8.show();
-
-                    break;
                 default:
 
                     break;
@@ -236,26 +162,28 @@ public class HinduAdapter extends RecyclerView.Adapter<HinduAdapter.viewHolder>{
     }
 
 
+
+
     @Override
     public int getItemCount() {
         return list.size();
     }
 
 
-
-    public static class viewHolder extends RecyclerView.ViewHolder{
-
-        ImageView image;
-        TextView text;
+public static class viewHolder extends ViewHolder {
+    ImageView image;
+    TextView text;
 
 
-        public viewHolder(@NonNull View itemView) {
-            super(itemView);
+    public viewHolder(@NonNull View itemView) {
+        super(itemView);
 
 
-            image = itemView.findViewById(R.id.image);
-            text = itemView.findViewById(R.id.text);
+        image = itemView.findViewById(R.id.image);
+        text = itemView.findViewById(R.id.text);
 
-        }
     }
-}
+}}
+
+
+
