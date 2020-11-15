@@ -1,5 +1,6 @@
 package com.binni.ourvedic;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -14,7 +15,10 @@ import com.binni.ourvedic.Models.RecyclerModel;
 
 import java.util.ArrayList;
 
+import static com.binni.ourvedic.Adapters.HinduAdapter.MyPREFERENCES;
+
 public class HinduActivity extends AppCompatActivity {
+    public static SharedPreferences.Editor editor;
     RecyclerView list;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,6 +28,15 @@ public class HinduActivity extends AppCompatActivity {
         list = findViewById(R.id.list);
 
         ArrayList<HinduModel> items = new ArrayList<>();
+
+
+
+
+        SharedPreferences sharedPref;
+        sharedPref =getSharedPreferences(MyPREFERENCES, MODE_PRIVATE);
+
+        editor = sharedPref.edit();
+
 
 
 

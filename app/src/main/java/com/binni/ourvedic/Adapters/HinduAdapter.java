@@ -3,6 +3,7 @@ package com.binni.ourvedic.Adapters;
 import android.app.AlertDialog;
 import android.content.Context;
 
+import android.content.SharedPreferences;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,18 +16,32 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 
+import com.binni.ourvedic.HinduActivity;
 import com.binni.ourvedic.Models.HinduModel;
 
 import com.binni.ourvedic.R;
 
 import java.util.ArrayList;
 
+import static android.content.Context.MODE_PRIVATE;
+
 public class HinduAdapter extends RecyclerView.Adapter<HinduAdapter.viewHolder>{
 
 
     ArrayList<HinduModel> list;
     Context context;
+    public static final String MyPREFERENCES = "MyPrefs" ;
+    public static final String Fruits = "FruitsKey";
+    public static final String Dhup = "DhupKey";
+    public static final String AgarBatti = "AgarBattiKey";
+    public static final String GulabJal = "GulabJalKey";
+    public static final String KumKum = "KumKumKey";
+    public static final String Nariyal = "NariyalKey";
+    public static final String Camphor = "CamphorKey";
+    public static final String Flowers = "FlowersKey";
 
+
+    public static int Fruitno=0,Dhupno=0,AgarBattino=0,GulabJalno=0,KumKumno=0,Nariyalno=0,Camphorno=0,Flowersno=0;
 
     public HinduAdapter(ArrayList<HinduModel> list, Context context) {
         this.list = list;
@@ -67,6 +82,10 @@ public class HinduAdapter extends RecyclerView.Adapter<HinduAdapter.viewHolder>{
                     builder.setPositiveButton("yes", (dialog, which) -> {
                         //by clicking on yes button the selected item should be added to cart
                         //TO-DO
+                        Fruitno++;
+                        HinduActivity.editor.putString(Fruits, Fruitno+"");
+                        HinduActivity.editor.apply();
+
                         Toast.makeText(context, model.getText() +" added", Toast.LENGTH_SHORT).show();
                     });
                     builder.setNegativeButton("No", (dialog, which) -> builder.setOnCancelListener(dialog19 -> {
@@ -86,6 +105,9 @@ public class HinduAdapter extends RecyclerView.Adapter<HinduAdapter.viewHolder>{
                     builder1.setPositiveButton("yes", (dialog, which) -> {
                         //by clicking on yes button the selected item should be added to cart
                         //TO-DO
+                        Dhupno++;
+                        HinduActivity.editor.putString(Dhup, Dhupno+"");
+                        HinduActivity.editor.apply();
                         Toast.makeText(context, model.getText() +" added", Toast.LENGTH_SHORT).show();
                     });
                     builder1.setNegativeButton("No", (dialog, which) -> builder1.setOnCancelListener(dialog18 -> {
@@ -104,6 +126,10 @@ public class HinduAdapter extends RecyclerView.Adapter<HinduAdapter.viewHolder>{
                     builder2.setPositiveButton("yes", (dialog, which) -> {
                         //by clicking on yes button the selected item should be added to cart
                         //TO-DO
+                        AgarBattino++;
+                        HinduActivity.editor.putString(AgarBatti, AgarBattino+"");
+                        HinduActivity.editor.apply();
+
                         Toast.makeText(context, model.getText() +" added", Toast.LENGTH_SHORT).show();
                     });
                     builder2.setNegativeButton("No", (dialog, which) -> builder2.setOnCancelListener(dialog17 -> {
@@ -121,6 +147,11 @@ public class HinduAdapter extends RecyclerView.Adapter<HinduAdapter.viewHolder>{
                     builder3.setPositiveButton("yes", (dialog, which) -> {
                         //by clicking on yes button the selected item should be added to cart
                         //TO-DO
+                        GulabJalno++;
+
+                        HinduActivity.editor.putString(GulabJal, GulabJalno+"");
+                        HinduActivity.editor.apply();
+
                         Toast.makeText(context, model.getText() +" added", Toast.LENGTH_SHORT).show();
                     });
                     builder3.setNegativeButton("no", (dialog, which) -> builder3.setOnCancelListener(dialog16 -> {
@@ -139,6 +170,10 @@ public class HinduAdapter extends RecyclerView.Adapter<HinduAdapter.viewHolder>{
                     builder4.setPositiveButton("yes", (dialog, which) -> {
                         //by clicking on yes button the selected item should be added to cart
                         //TO-DO
+
+                        KumKumno++;
+                        HinduActivity.editor.putString(KumKum, KumKumno+"");
+                        HinduActivity.editor.apply();
                         Toast.makeText(context, model.getText() +" added", Toast.LENGTH_SHORT).show();
                     });
                     builder4.setNegativeButton("no", (dialog, which) -> builder4.setOnCancelListener(dialog15 -> {
@@ -158,6 +193,9 @@ public class HinduAdapter extends RecyclerView.Adapter<HinduAdapter.viewHolder>{
                     builder5.setPositiveButton("yes", (dialog, which) -> {
                         //by clicking on yes button the selected item should be added to cart
                         //TO-DO
+                        Nariyalno++;
+                        HinduActivity.editor.putString(Nariyal, Nariyalno+"");
+                        HinduActivity.editor.apply();
                         Toast.makeText(context, model.getText() +" added", Toast.LENGTH_SHORT).show();
                     });
                     builder5.setNegativeButton("no", (dialog, which) -> builder5.setOnCancelListener(dialog14 -> {
@@ -177,6 +215,9 @@ public class HinduAdapter extends RecyclerView.Adapter<HinduAdapter.viewHolder>{
                     builder6.setPositiveButton("Yes", (dialog, which) -> {
                         //by clicking on yes button the selected item should be added to cart
                         //TO-DO
+                        Camphorno++;
+                        HinduActivity.editor.putString(Camphor, Camphorno+"");
+                        HinduActivity.editor.apply();
                         Toast.makeText(context, model.getText() +" added", Toast.LENGTH_SHORT).show();
                     });
                     builder6.setNegativeButton("No", (dialog, which) -> builder6.setOnCancelListener(dialog13 -> {
@@ -196,6 +237,9 @@ public class HinduAdapter extends RecyclerView.Adapter<HinduAdapter.viewHolder>{
                     builder7.setPositiveButton("Yes", (dialog, which) -> {
                         //by clicking on yes button the selected item should be added to cart
                         //TO-DO
+                        Flowersno++;
+                        HinduActivity.editor.putString(Flowers, Flowersno+"");
+                        HinduActivity.editor.apply();
                         Toast.makeText(context, model.getText() +" added", Toast.LENGTH_SHORT).show();
                     });
                     builder7.setNegativeButton("no", (dialog, which) -> builder7.setOnCancelListener(dialog12 -> {
@@ -207,24 +251,7 @@ public class HinduAdapter extends RecyclerView.Adapter<HinduAdapter.viewHolder>{
 
                     break;
 
-                case 8:
 
-                    AlertDialog.Builder builder8 = new AlertDialog.Builder(v.getContext());
-                    builder8.setTitle(model.getText());
-                    builder8.setMessage("You want to add this item in Cart");
-                    builder8.setPositiveButton("yes", (dialog, which) -> {
-                        //by clicking on yes button the selected item should be added to cart
-                        //TO-DO
-                        Toast.makeText(context, model.getText() +" added", Toast.LENGTH_SHORT).show();
-                    });
-                    builder8.setNegativeButton("No", (dialog, which) -> builder8.setOnCancelListener(dialog1 -> {
-                        //by clicking no the alert box will disappear
-                        //done
-                    }));
-                    AlertDialog alertDialog8 = builder8.create();
-                    alertDialog8.show();
-
-                    break;
                 default:
 
                     break;
