@@ -3,6 +3,7 @@ package com.binni.ourvedic.Adapters;
 import android.app.AlertDialog;
 import android.content.Context;
 
+import android.content.SharedPreferences;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -21,13 +22,24 @@ import com.binni.ourvedic.R;
 
 import java.util.ArrayList;
 
+import static android.content.Context.MODE_PRIVATE;
+
 public class HinduAdapter extends RecyclerView.Adapter<HinduAdapter.viewHolder>{
 
 
     ArrayList<HinduModel> list;
     Context context;
+    public static final String MyPREFERENCES = "MyPrefs" ;
+    public static final String Fruits = "FruitsKey";
+    public static final String Dhup = "DhupKey";
+    public static final String AgarBatti = "AgarBattiKey";
+    public static final String GulabJal = "GulabJalKey";
+    public static final String KumKum = "KumKumKey";
+    public static final String Nariyal = "NariyalKey";
+    public static final String Camphor = "CamphorKey";
+    public static final String Flowers = "FlowersKey";
 
-
+    SharedPreferences sharedPref;
     public HinduAdapter(ArrayList<HinduModel> list, Context context) {
         this.list = list;
         this.context = context;
@@ -43,6 +55,8 @@ public class HinduAdapter extends RecyclerView.Adapter<HinduAdapter.viewHolder>{
                 false
         );
 
+        sharedPref =getSharedPreferences(MyPREFERENCES, MODE_PRIVATE);
+
 
 
         return new viewHolder(view);
@@ -57,6 +71,7 @@ public class HinduAdapter extends RecyclerView.Adapter<HinduAdapter.viewHolder>{
 
         holder.image.setOnClickListener(v -> {
 
+            SharedPreferences.Editor editor = sharedPref.edit();
 
             switch (position){
                 case 0:
@@ -67,6 +82,10 @@ public class HinduAdapter extends RecyclerView.Adapter<HinduAdapter.viewHolder>{
                     builder.setPositiveButton("yes", (dialog, which) -> {
                         //by clicking on yes button the selected item should be added to cart
                         //TO-DO
+
+                        editor.putString("value", model.getText().toString());
+                        editor.apply();
+
                         Toast.makeText(context, model.getText() +" added", Toast.LENGTH_SHORT).show();
                     });
                     builder.setNegativeButton("No", (dialog, which) -> builder.setOnCancelListener(dialog19 -> {
