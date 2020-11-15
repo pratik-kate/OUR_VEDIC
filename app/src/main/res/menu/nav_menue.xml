@@ -13,12 +13,18 @@
         android:title="@string/your_cart" />
 
     <item
+        android:id="@+id/pandit"
+        android:icon="@drawable/ic_baseline_person_outline_24"
+        android:title="@string/pandit" />
+
+
+    <item
         android:id="@+id/about"
         android:icon="@drawable/ic_baseline_info_24"
-        android:title="About" />
+        android:title="@string/about" />
 
     <item
         android:id="@+id/contact"
         android:icon="@drawable/ic_baseline_contact_support_24"
-        android:title="Contact" />
+        android:title="@string/contact" />
 </menu>

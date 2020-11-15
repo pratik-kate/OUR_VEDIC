@@ -22,4 +22,12 @@
     <string name="sikh">Sikh</string>
     <string name="buddh">Buddh</string>
     <string name="jain">Jain</string>
+    <string name="place_order">Place Order</string>
+    <string name="check_out">Check Out</string>
+    <string name="enter_name">Enter Name</string>
+    <string name="enter_phone_number">Enter Phone Number</string>
+    <string name="enter_address">Enter Address</string>
+    <string name="confirm">Confirm</string>
+    <string name="pandit">Pandit</string>
+
 </resources>

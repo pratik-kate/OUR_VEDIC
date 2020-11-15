@@ -59,9 +59,6 @@ public class HinduActivity extends AppCompatActivity {
         HinduAdapter adapter = new HinduAdapter(items,HinduActivity.this);
         list.setAdapter(adapter);
 
-//
-//        LinearLayoutManager layout = new LinearLayoutManager(HinduActivity.this);
-//        list.setLayoutManager(layout);
 
 
         GridLayoutManager layout = new GridLayoutManager(HinduActivity.this,2);
