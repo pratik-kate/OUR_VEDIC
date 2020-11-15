@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
 
 import com.binni.ourvedic.Adapters.HinduAdapter;
@@ -15,8 +16,11 @@ import com.binni.ourvedic.Models.SikhModel;
 
 import java.util.ArrayList;
 
-public class JainActivity extends AppCompatActivity {
+import static com.binni.ourvedic.Adapters.BuddhAdapter.BuddhPREFERENCES;
+import static com.binni.ourvedic.Adapters.JainAdapter.JainPREFERENCES;
 
+public class JainActivity extends AppCompatActivity {
+    public static SharedPreferences.Editor editor;
     RecyclerView list;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,6 +31,13 @@ public class JainActivity extends AppCompatActivity {
         list = findViewById(R.id.list);
 
         ArrayList<JainModel> items = new ArrayList<>();
+
+
+        SharedPreferences sharedPrefJain;
+
+        sharedPrefJain =getSharedPreferences(JainPREFERENCES, MODE_PRIVATE);
+
+        editor = sharedPrefJain.edit();
 
 
 

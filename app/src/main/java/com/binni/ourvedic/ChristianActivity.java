@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
 
 
@@ -12,7 +13,11 @@ import com.binni.ourvedic.Models.ChristanModel;
 
 import java.util.ArrayList;
 
+import static com.binni.ourvedic.Adapters.ChristanAdapter.ChristianPREFERENCES;
+import static com.binni.ourvedic.Adapters.IslamAdapter.IslamPREFERENCES;
+
 public class ChristianActivity extends AppCompatActivity {
+    public static SharedPreferences.Editor editor;
     RecyclerView list;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +30,12 @@ public class ChristianActivity extends AppCompatActivity {
 
             ArrayList<ChristanModel> items = new ArrayList<>();
 
+
+        SharedPreferences sharedPrefIChristian;
+
+        sharedPrefIChristian =getSharedPreferences(ChristianPREFERENCES, MODE_PRIVATE);
+
+        editor = sharedPrefIChristian.edit();
 
 
             items.add(new ChristanModel(R.drawable.bible,"Bible"));

@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
 
 import com.binni.ourvedic.Adapters.HinduAdapter;
@@ -13,7 +14,11 @@ import com.binni.ourvedic.Models.SikhModel;
 
 import java.util.ArrayList;
 
+import static com.binni.ourvedic.Adapters.ChristanAdapter.ChristianPREFERENCES;
+import static com.binni.ourvedic.Adapters.SikhAdapter.ShikhPREFERENCES;
+
 public class SikhActivity extends AppCompatActivity {
+    public static SharedPreferences.Editor editor;
     RecyclerView list;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,6 +29,12 @@ public class SikhActivity extends AppCompatActivity {
         list = findViewById(R.id.list);
 
         ArrayList<SikhModel> items = new ArrayList<>();
+
+        SharedPreferences sharedPrefShikh;
+
+        sharedPrefShikh =getSharedPreferences(ShikhPREFERENCES, MODE_PRIVATE);
+
+        editor = sharedPrefShikh.edit();
 
 
 

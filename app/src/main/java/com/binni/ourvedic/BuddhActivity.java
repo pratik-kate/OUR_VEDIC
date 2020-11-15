@@ -4,17 +4,19 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
 
 import com.binni.ourvedic.Adapters.BuddhAdapter;
-import com.binni.ourvedic.Adapters.HinduAdapter;
 import com.binni.ourvedic.Models.BuddhModel;
-import com.binni.ourvedic.Models.HinduModel;
 
 import java.util.ArrayList;
 
-public class BuddhActivity extends AppCompatActivity {
+import static com.binni.ourvedic.Adapters.BuddhAdapter.BuddhPREFERENCES;
 
+
+public class BuddhActivity extends AppCompatActivity {
+    public static SharedPreferences.Editor editor;
     RecyclerView list;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,6 +26,13 @@ public class BuddhActivity extends AppCompatActivity {
         list = findViewById(R.id.list);
 
         ArrayList<BuddhModel> items = new ArrayList<>();
+
+        SharedPreferences sharedPrefBuddh;
+
+        sharedPrefBuddh =getSharedPreferences(BuddhPREFERENCES, MODE_PRIVATE);
+
+        editor = sharedPrefBuddh.edit();
+
 
 
 

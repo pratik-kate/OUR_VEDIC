@@ -16,6 +16,8 @@ import androidx.recyclerview.widget.RecyclerView;
 import androidx.recyclerview.widget.RecyclerView.ViewHolder;
 
 
+import com.binni.ourvedic.HinduActivity;
+import com.binni.ourvedic.IslamActivity;
 import com.binni.ourvedic.Models.IslamModel;
 import com.binni.ourvedic.R;
 
@@ -24,6 +26,12 @@ import java.util.ArrayList;
 public class IslamAdapter extends RecyclerView.Adapter<IslamAdapter.viewHolder>{
 
 
+    public static final String IslamPREFERENCES = "MyPrefs" ;
+    public static final String AllahFrame = "AllahFrameKey";
+    public static final String Chadar = "ChadarKey";
+    public static final String Quran = "QuranKey";
+
+    public static int AllahFrameno=0,Chadarno=0,Quranno=0;
     ArrayList<IslamModel> list;
     Context context;
 
@@ -67,6 +75,10 @@ public class IslamAdapter extends RecyclerView.Adapter<IslamAdapter.viewHolder>{
                     builder.setPositiveButton("yes", (dialog, which) -> {
                         //by clicking on yes button the selected item should be added to cart
                         //TO-DO
+                        AllahFrameno++;
+                        IslamActivity.editor.putString(AllahFrame, AllahFrameno+"");
+                        IslamActivity.editor.apply();
+
                         Toast.makeText(context, model.getText() +" added", Toast.LENGTH_SHORT).show();
                     });
                     builder.setNegativeButton("No", (dialog, which) -> builder.setOnCancelListener(dialog15 -> {
@@ -86,6 +98,9 @@ public class IslamAdapter extends RecyclerView.Adapter<IslamAdapter.viewHolder>{
                     builder1.setPositiveButton("yes", (dialog, which) -> {
                         //by clicking on yes button the selected item should be added to cart
                         //TO-DO
+                        Chadarno++;
+                        IslamActivity.editor.putString(Chadar, Chadarno+"");
+                        IslamActivity.editor.apply();
                         Toast.makeText(context, model.getText() +" added", Toast.LENGTH_SHORT).show();
                     });
                     builder1.setNegativeButton("No", (dialog, which) -> builder1.setOnCancelListener(dialog14 -> {
@@ -104,6 +119,10 @@ public class IslamAdapter extends RecyclerView.Adapter<IslamAdapter.viewHolder>{
                     builder2.setPositiveButton("yes", (dialog, which) -> {
                         //by clicking on yes button the selected item should be added to cart
                         //TO-DO
+
+                        Quranno++;
+                        IslamActivity.editor.putString(Quran, Quranno+"");
+                        IslamActivity.editor.apply();
                         Toast.makeText(context, model.getText() +" added", Toast.LENGTH_SHORT).show();
                     });
                     builder2.setNegativeButton("No", (dialog, which) -> builder2.setOnCancelListener(dialog13 -> {

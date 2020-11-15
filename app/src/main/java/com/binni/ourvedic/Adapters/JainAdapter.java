@@ -15,7 +15,8 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 
-
+import com.binni.ourvedic.BuddhActivity;
+import com.binni.ourvedic.JainActivity;
 import com.binni.ourvedic.Models.JainModel;
 
 import com.binni.ourvedic.R;
@@ -27,6 +28,18 @@ public class JainAdapter extends RecyclerView.Adapter<JainAdapter.viewHolder>{
 
     ArrayList<JainModel> list;
     Context context;
+
+    public static final String JainPREFERENCES = "MyPrefs" ;
+    public static final String FruitsJain = "FruitsJainKey";
+    public static final String Gangajal = "GangajalKey";
+    public static final String ScandalWood = "ScandalWoodKey";
+    public static final String GulabJalJain = "GulabJalJainKey";
+    public static final String KumkumJain = "KumkumJainKey";
+    public static final String NariyalJain = "NariyalJainKey";
+    public static final String DiyaJain = "DiyaJainKey";
+    public static final String Akshat = "AkshatKey";
+
+    public static int FruitsJainno=0,Gangajalno=0,ScandalWoodno=0,GulabJalJainno=0,KumkumJainno=0,NariyalJainno=0,DiyaJainno=0,Akshatno=0;
 
 
     public JainAdapter(ArrayList<JainModel> list, Context context) {
@@ -61,13 +74,15 @@ public class JainAdapter extends RecyclerView.Adapter<JainAdapter.viewHolder>{
 
             switch (position){
                 case 0:
-
                     AlertDialog.Builder builder = new AlertDialog.Builder(v.getContext());
                     builder.setTitle(model.getText());
                     builder.setMessage("You want to add this item in cart");
                     builder.setPositiveButton("yes", (dialog, which) -> {
                         //by clicking on yes button the selected item should be added to cart
                         //TO-DO
+                        FruitsJainno++;
+                        JainActivity.editor.putString(FruitsJain, FruitsJainno+"");
+                        JainActivity.editor.apply();
                         Toast.makeText(context, model.getText() +" added", Toast.LENGTH_SHORT).show();
                     });
                     builder.setNegativeButton("No", (dialog, which) -> builder.setOnCancelListener(dialog15 -> {
@@ -87,6 +102,10 @@ public class JainAdapter extends RecyclerView.Adapter<JainAdapter.viewHolder>{
                     builder1.setPositiveButton("yes", (dialog, which) -> {
                         //by clicking on yes button the selected item should be added to cart
                         //TO-DO
+                        Gangajalno++;
+                        JainActivity.editor.putString(Gangajal, Gangajalno+"");
+                        JainActivity.editor.apply();
+
                         Toast.makeText(context, model.getText() +" added", Toast.LENGTH_SHORT).show();
                     });
                     builder1.setNegativeButton("No", (dialog, which) -> builder1.setOnCancelListener(dialog14 -> {
@@ -105,6 +124,9 @@ public class JainAdapter extends RecyclerView.Adapter<JainAdapter.viewHolder>{
                     builder2.setPositiveButton("yes", (dialog, which) -> {
                         //by clicking on yes button the selected item should be added to cart
                         //TO-DO
+                        ScandalWoodno++;
+                        JainActivity.editor.putString(ScandalWood, ScandalWoodno+"");
+                        JainActivity.editor.apply();
                         Toast.makeText(context, model.getText() +" added", Toast.LENGTH_SHORT).show();
                     });
                     builder2.setNegativeButton("No", (dialog, which) -> builder2.setOnCancelListener(dialog13 -> {
@@ -122,6 +144,9 @@ public class JainAdapter extends RecyclerView.Adapter<JainAdapter.viewHolder>{
                     builder3.setPositiveButton("yes", (dialog, which) -> {
                         //by clicking on yes button the selected item should be added to cart
                         //TO-DO
+                        GulabJalJainno++;
+                        JainActivity.editor.putString(GulabJalJain, GulabJalJainno+"");
+                        JainActivity.editor.apply();
                         Toast.makeText(context, model.getText() +" added", Toast.LENGTH_SHORT).show();
                     });
                     builder3.setNegativeButton("no", (dialog, which) -> builder3.setOnCancelListener(dialog12 -> {
@@ -140,6 +165,9 @@ public class JainAdapter extends RecyclerView.Adapter<JainAdapter.viewHolder>{
                     builder4.setPositiveButton("yes", (dialog, which) -> {
                         //by clicking on yes button the selected item should be added to cart
                         //TO-DO
+                        KumkumJainno++;
+                        JainActivity.editor.putString(KumkumJain, KumkumJainno+"");
+                        JainActivity.editor.apply();
                         Toast.makeText(context, model.getText() +" added", Toast.LENGTH_SHORT).show();
                     });
                     builder4.setNegativeButton("no", (dialog, which) -> builder4.setOnCancelListener(dialog1 -> {
@@ -160,6 +188,9 @@ public class JainAdapter extends RecyclerView.Adapter<JainAdapter.viewHolder>{
                     builder5.setPositiveButton("yes", (dialog, which) -> {
                         //by clicking on yes button the selected item should be added to cart
                         //TO-DO
+                        NariyalJainno++;
+                        JainActivity.editor.putString(NariyalJain, NariyalJainno+"");
+                        JainActivity.editor.apply();
                         Toast.makeText(context, model.getText() +" added", Toast.LENGTH_SHORT).show();
                     });
                     builder5.setNegativeButton("no", (dialog, which) -> builder5.setOnCancelListener(dialog14 -> {
@@ -179,6 +210,9 @@ public class JainAdapter extends RecyclerView.Adapter<JainAdapter.viewHolder>{
                     builder6.setPositiveButton("Yes", (dialog, which) -> {
                         //by clicking on yes button the selected item should be added to cart
                         //TO-DO
+                        DiyaJainno++;
+                        JainActivity.editor.putString(DiyaJain, DiyaJainno+"");
+                        JainActivity.editor.apply();
                         Toast.makeText(context, model.getText() +" added", Toast.LENGTH_SHORT).show();
                     });
                     builder6.setNegativeButton("No", (dialog, which) -> builder6.setOnCancelListener(dialog13 -> {
@@ -198,6 +232,9 @@ public class JainAdapter extends RecyclerView.Adapter<JainAdapter.viewHolder>{
                     builder7.setPositiveButton("Yes", (dialog, which) -> {
                         //by clicking on yes button the selected item should be added to cart
                         //TO-DO
+                        Akshatno++;
+                        JainActivity.editor.putString(Akshat, Akshatno+"");
+                        JainActivity.editor.apply();
                         Toast.makeText(context, model.getText() +" added", Toast.LENGTH_SHORT).show();
                     });
                     builder7.setNegativeButton("no", (dialog, which) -> builder7.setOnCancelListener(dialog12 -> {
