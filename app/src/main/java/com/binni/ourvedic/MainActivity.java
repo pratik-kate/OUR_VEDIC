@@ -7,6 +7,7 @@ import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.FragmentTransaction;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.widget.Toast;
 
@@ -15,6 +16,13 @@ import com.binni.ourvedic.fragments.AboutFragment;
 import com.binni.ourvedic.fragments.ContactFragment;
 import com.binni.ourvedic.fragments.ShopFragment;
 import com.google.android.material.navigation.NavigationView;
+
+import static com.binni.ourvedic.Adapters.BuddhAdapter.BuddhPREFERENCES;
+import static com.binni.ourvedic.Adapters.ChristanAdapter.ChristianPREFERENCES;
+import static com.binni.ourvedic.Adapters.HinduAdapter.HinduPREFERENCES;
+import static com.binni.ourvedic.Adapters.IslamAdapter.IslamPREFERENCES;
+import static com.binni.ourvedic.Adapters.JainAdapter.JainPREFERENCES;
+import static com.binni.ourvedic.Adapters.SikhAdapter.ShikhPREFERENCES;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -28,6 +36,31 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        SharedPreferences pref = getSharedPreferences(HinduPREFERENCES, MODE_PRIVATE);
+        SharedPreferences.Editor editor = pref.edit();
+        editor.clear();
+        editor.apply();
+        SharedPreferences pref1 = getSharedPreferences(IslamPREFERENCES, MODE_PRIVATE);
+        SharedPreferences.Editor editor1 = pref1.edit();
+        editor1.clear();
+        editor1.apply();
+        SharedPreferences pref2 = getSharedPreferences(ChristianPREFERENCES, MODE_PRIVATE);
+        SharedPreferences.Editor editor2 = pref2.edit();
+        editor2.clear();
+        editor2.apply();
+        SharedPreferences pref3 = getSharedPreferences(ShikhPREFERENCES, MODE_PRIVATE);
+        SharedPreferences.Editor editor3 = pref3.edit();
+        editor3.clear();
+        editor3.apply();
+        SharedPreferences pref4 = getSharedPreferences(BuddhPREFERENCES, MODE_PRIVATE);
+        SharedPreferences.Editor editor4 = pref4.edit();
+        editor4.clear();
+        editor4.apply();
+        SharedPreferences pref5 = getSharedPreferences(JainPREFERENCES, MODE_PRIVATE);
+        SharedPreferences.Editor editor5 = pref5.edit();
+        editor5.clear();
+        editor5.apply();
 
         nv = findViewById(R.id.nav);
         toolbar = findViewById(R.id.toolbar);

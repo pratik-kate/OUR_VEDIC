@@ -24,7 +24,6 @@ public class CartFragment extends Fragment {
 
 TextView demo;
 
-
     public CartFragment() {
         // Required empty public constructor
     }
