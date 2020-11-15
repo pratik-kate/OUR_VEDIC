@@ -28,6 +28,15 @@ public class JainAdapter extends RecyclerView.Adapter<JainAdapter.viewHolder>{
     ArrayList<JainModel> list;
     Context context;
 
+    public static final String JainPREFERENCES = "MyPrefs" ;
+    public static final String FruitsJain = "FruitsJainKey";
+    public static final String Gangajal = "GangajalKey";
+    public static final String ScandalWood = "ScandalWoodKey";
+    public static final String GulabJalJain = "GulabJalJainKey";
+    public static final String KumkumJain = "KumkumJainKey";
+    public static final String NariyalJain = "NariyalJainKey";
+    public static final String DiyaJain = "DiyaJainKey";
+    public static final String Akshat = "AkshatKey";
 
     public JainAdapter(ArrayList<JainModel> list, Context context) {
         this.list = list;

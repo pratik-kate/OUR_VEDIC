@@ -13,10 +13,17 @@ import com.binni.ourvedic.R;
 
 import static android.content.Context.MODE_PRIVATE;
 import static com.binni.ourvedic.Adapters.BuddhAdapter.*;
+import static com.binni.ourvedic.Adapters.BuddhAdapter.BuddhaStatue;
+import static com.binni.ourvedic.Adapters.BuddhAdapter.Diya;
+import static com.binni.ourvedic.Adapters.BuddhAdapter.Kundika;
+import static com.binni.ourvedic.Adapters.BuddhAdapter.Patra;
+import static com.binni.ourvedic.Adapters.BuddhAdapter.Shankh;
+import static com.binni.ourvedic.Adapters.BuddhAdapter.Vajra;
 import static com.binni.ourvedic.Adapters.ChristanAdapter.*;
 import static com.binni.ourvedic.Adapters.HinduAdapter.*;
 import static com.binni.ourvedic.Adapters.IslamAdapter.*;
 import static com.binni.ourvedic.Adapters.SikhAdapter.*;
+import static com.binni.ourvedic.Adapters.JainAdapter.*;
 
 
 public class CartFragment extends Fragment {
@@ -82,6 +89,21 @@ TextView demo;
         String Patravalue = sharedPreferencesBuddh.getString(Patra,"");
         String Shankhvalue = sharedPreferencesBuddh.getString(Shankh,"");
         String Vajravalue = sharedPreferencesBuddh.getString(Vajra,"");
+
+
+
+        //Getting VAlue from JAIN
+        SharedPreferences sharedPreferencesJain = this.getActivity().getSharedPreferences(JainPREFERENCES, MODE_PRIVATE);
+
+        //it is getting the value from activties how many are selected, if not selected then default value =0;
+        String FruitsJainvalue = sharedPreferencesJain.getString(FruitsJain,"");
+        String Gangajalvalue = sharedPreferencesJain.getString(Gangajal,"");
+        String ScandalWoodvalue = sharedPreferencesJain.getString(ScandalWood,"");
+        String GulabJalJainvalue = sharedPreferencesJain.getString(GulabJalJain,"");
+        String KumkumJainvalue = sharedPreferencesJain.getString(KumkumJain,"");
+        String NariyalJainvalue = sharedPreferencesJain.getString(NariyalJain,"");
+        String DiyaJainvalue = sharedPreferencesJain.getString(DiyaJain,"");
+        String Akshatvalue = sharedPreferencesJain.getString(Akshat,"");
 
 
 

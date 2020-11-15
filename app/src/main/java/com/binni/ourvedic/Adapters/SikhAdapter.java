@@ -14,7 +14,6 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 
-import com.binni.ourvedic.ChristianActivity;
 import com.binni.ourvedic.Models.SikhModel;
 import com.binni.ourvedic.R;
 import com.binni.ourvedic.SikhActivity;
