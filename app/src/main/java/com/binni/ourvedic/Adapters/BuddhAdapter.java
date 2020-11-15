@@ -14,8 +14,10 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.binni.ourvedic.BuddhActivity;
 import com.binni.ourvedic.Models.BuddhModel;
 import com.binni.ourvedic.R;
+import com.binni.ourvedic.SikhActivity;
 
 import java.util.ArrayList;
 
@@ -24,7 +26,16 @@ public class BuddhAdapter extends RecyclerView.Adapter<BuddhAdapter.viewHolder>{
 
     ArrayList<BuddhModel> list;
     Context context;
+    public static final String BuddhPREFERENCES = "MyPrefs" ;
+    public static final String BuddhaStatue = "BuddhaStatueKey";
+    public static final String Diya = "DiyaKey";
+    public static final String Kundika = "KundikaKey";
+    public static final String Patra = "PatraKey";
+    public static final String Shankh = "ShankhKey";
+    public static final String Vajra = "VajraKey";
 
+
+    public static int BuddhaStatueno=0,Vajrano=0,Shankhno=0,Patrano=0,Kundikano=0,Diyano=0;
 
     public BuddhAdapter(ArrayList<BuddhModel> list, Context context) {
 
@@ -66,6 +77,10 @@ public class BuddhAdapter extends RecyclerView.Adapter<BuddhAdapter.viewHolder>{
                     builder.setPositiveButton("yes", (dialog, which) -> {
                         //by clicking on yes button the selected item should be added to cart
                         //TO-DO
+
+                        BuddhaStatueno++;
+                        BuddhActivity.editor.putString(BuddhaStatue, BuddhaStatueno+"");
+                        BuddhActivity.editor.apply();
                         Toast.makeText(context, model.getText() +" added", Toast.LENGTH_SHORT).show();
                     });
                     builder.setNegativeButton("No", (dialog, which) -> builder.setOnCancelListener(dialog16 -> {
@@ -85,6 +100,10 @@ public class BuddhAdapter extends RecyclerView.Adapter<BuddhAdapter.viewHolder>{
                     builder1.setPositiveButton("yes", (dialog, which) -> {
                         //by clicking on yes button the selected item should be added to cart
                         //TO-DO
+
+                        Diyano++;
+                        BuddhActivity.editor.putString(Diya, Diyano+"");
+                        BuddhActivity.editor.apply();
                         Toast.makeText(context, model.getText() +" added", Toast.LENGTH_SHORT).show();
                     });
                     builder1.setNegativeButton("No", (dialog, which) -> builder1.setOnCancelListener(dialog15 -> {
@@ -103,6 +122,10 @@ public class BuddhAdapter extends RecyclerView.Adapter<BuddhAdapter.viewHolder>{
                     builder2.setPositiveButton("yes", (dialog, which) -> {
                         //by clicking on yes button the selected item should be added to cart
                         //TO-DO
+
+                        Kundikano++;
+                        BuddhActivity.editor.putString(Kundika, Kundikano+"");
+                        BuddhActivity.editor.apply();
                         Toast.makeText(context, model.getText() +" added", Toast.LENGTH_SHORT).show();
                     });
                     builder2.setNegativeButton("No", (dialog, which) -> builder2.setOnCancelListener(dialog14 -> {
@@ -120,6 +143,10 @@ public class BuddhAdapter extends RecyclerView.Adapter<BuddhAdapter.viewHolder>{
                     builder3.setPositiveButton("yes", (dialog, which) -> {
                         //by clicking on yes button the selected item should be added to cart
                         //TO-DO
+
+                        Patrano++;
+                        BuddhActivity.editor.putString(Patra, Patrano+"");
+                        BuddhActivity.editor.apply();
                         Toast.makeText(context, model.getText() +" added", Toast.LENGTH_SHORT).show();
                     });
                     builder3.setNegativeButton("no", (dialog, which) -> builder3.setOnCancelListener(dialog13 -> {
@@ -138,6 +165,10 @@ public class BuddhAdapter extends RecyclerView.Adapter<BuddhAdapter.viewHolder>{
                     builder4.setPositiveButton("yes", (dialog, which) -> {
                         //by clicking on yes button the selected item should be added to cart
                         //TO-DO
+
+                        Shankhno++;
+                        BuddhActivity.editor.putString(Shankh, Shankhno+"");
+                        BuddhActivity.editor.apply();
                         Toast.makeText(context, model.getText() +" added", Toast.LENGTH_SHORT).show();
                     });
                     builder4.setNegativeButton("no", (dialog, which) -> builder4.setOnCancelListener(dialog12 -> {
@@ -157,6 +188,10 @@ public class BuddhAdapter extends RecyclerView.Adapter<BuddhAdapter.viewHolder>{
                     builder5.setPositiveButton("yes", (dialog, which) -> {
                         //by clicking on yes button the selected item should be added to cart
                         //TO-DO
+
+                        Vajrano++;
+                        BuddhActivity.editor.putString(Vajra, Vajrano+"");
+                        BuddhActivity.editor.apply();
                         Toast.makeText(context, model.getText() +" added", Toast.LENGTH_SHORT).show();
                     });
                     builder5.setNegativeButton("no", (dialog, which) -> builder5.setOnCancelListener(dialog1 -> {

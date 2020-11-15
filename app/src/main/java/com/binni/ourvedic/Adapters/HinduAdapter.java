@@ -30,7 +30,7 @@ public class HinduAdapter extends RecyclerView.Adapter<HinduAdapter.viewHolder>{
 
     ArrayList<HinduModel> list;
     Context context;
-    public static final String MyPREFERENCES = "MyPrefs" ;
+    public static final String HinduPREFERENCES = "HinduPref" ;
     public static final String Fruits = "FruitsKey";
     public static final String Dhup = "DhupKey";
     public static final String AgarBatti = "AgarBattiKey";

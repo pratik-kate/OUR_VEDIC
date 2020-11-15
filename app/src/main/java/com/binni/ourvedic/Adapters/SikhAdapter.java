@@ -14,8 +14,10 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 
+import com.binni.ourvedic.ChristianActivity;
 import com.binni.ourvedic.Models.SikhModel;
 import com.binni.ourvedic.R;
+import com.binni.ourvedic.SikhActivity;
 
 import java.util.ArrayList;
 
@@ -25,6 +27,13 @@ public class SikhAdapter extends RecyclerView.Adapter<SikhAdapter.viewHolder>{
     ArrayList<SikhModel> list;
     Context context;
 
+    public static final String ShikhPREFERENCES = "MyPrefs" ;
+    public static final String Bhojpatra = "BhojpatraKey";
+    public static final String Janeu = "JaneuKey";
+    public static final String Kalsh = "JKalshKey";
+    public static final String Supari = "SupariKey";
+
+    public static int Bhojpatrano=0,Janeuno=0,Kalshno=0,Suparino=0;
 
     public SikhAdapter(ArrayList<SikhModel> list, Context context) {
         this.list = list;
@@ -64,6 +73,12 @@ public class SikhAdapter extends RecyclerView.Adapter<SikhAdapter.viewHolder>{
                     builder.setPositiveButton("yes", (dialog, which) -> {
                         //by clicking on yes button the selected item should be added to cart
                         //TO-DO
+                        Bhojpatrano++;
+                        SikhActivity.editor.putString(Bhojpatra, Bhojpatrano+"");
+                        SikhActivity.editor.apply();
+                        Toast.makeText(context, model.getText() + " added", Toast.LENGTH_SHORT).show();
+
+
                         Toast.makeText(context, model.getText() +" added", Toast.LENGTH_SHORT).show();
                     });
                     builder.setNegativeButton("No", (dialog, which) -> builder.setOnCancelListener(dialog1 -> {
@@ -83,6 +98,9 @@ public class SikhAdapter extends RecyclerView.Adapter<SikhAdapter.viewHolder>{
                     builder1.setPositiveButton("yes", (dialog, which) -> {
                         //by clicking on yes button the selected item should be added to cart
                         //TO-DO
+                        Janeuno++;
+                        SikhActivity.editor.putString(Janeu, Janeuno+"");
+                        SikhActivity.editor.apply();
                         Toast.makeText(context, model.getText() +" added", Toast.LENGTH_SHORT).show();
                     });
                     builder1.setNegativeButton("No", (dialog, which) -> builder1.setOnCancelListener(dialog12 -> {
@@ -101,6 +119,9 @@ public class SikhAdapter extends RecyclerView.Adapter<SikhAdapter.viewHolder>{
                     builder2.setPositiveButton("yes", (dialog, which) -> {
                         //by clicking on yes button the selected item should be added to cart
                         //TO-DO
+                        Kalshno++;
+                        SikhActivity.editor.putString(Kalsh, Kalshno+"");
+                        SikhActivity.editor.apply();
                         Toast.makeText(context, model.getText() +" added", Toast.LENGTH_SHORT).show();
                     });
                     builder2.setNegativeButton("No", (dialog, which) -> builder2.setOnCancelListener(dialog13 -> {
@@ -118,6 +139,9 @@ public class SikhAdapter extends RecyclerView.Adapter<SikhAdapter.viewHolder>{
                     builder3.setPositiveButton("yes", (dialog, which) -> {
                         //by clicking on yes button the selected item should be added to cart
                         //TO-DO
+                        Suparino++;
+                        SikhActivity.editor.putString(Supari, Suparino+"");
+                        SikhActivity.editor.apply();
                         Toast.makeText(context, model.getText() +" added", Toast.LENGTH_SHORT).show();
                     });
                     builder3.setNegativeButton("no", (dialog, which) -> builder3.setOnCancelListener(dialog14 -> {

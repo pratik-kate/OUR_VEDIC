@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.widget.ImageView;
 
@@ -14,8 +15,11 @@ import com.binni.ourvedic.Models.IslamModel;
 
 import java.util.ArrayList;
 
-public class IslamActivity extends AppCompatActivity {
+import static com.binni.ourvedic.Adapters.HinduAdapter.HinduPREFERENCES;
+import static com.binni.ourvedic.Adapters.IslamAdapter.IslamPREFERENCES;
 
+public class IslamActivity extends AppCompatActivity {
+    public static SharedPreferences.Editor editor;
     RecyclerView list;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,6 +31,12 @@ public class IslamActivity extends AppCompatActivity {
         ArrayList<IslamModel> items = new ArrayList<>();
 
 
+
+        SharedPreferences sharedPrefIslam;
+
+        sharedPrefIslam =getSharedPreferences(IslamPREFERENCES, MODE_PRIVATE);
+
+        editor = sharedPrefIslam.edit();
 
         items.add(new IslamModel(R.drawable.allahframe,"Allah Frame"));
         items.add(new IslamModel(R.drawable.chadar,"Chadar"));

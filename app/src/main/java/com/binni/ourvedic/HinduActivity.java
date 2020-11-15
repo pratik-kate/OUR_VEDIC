@@ -15,7 +15,8 @@ import com.binni.ourvedic.Models.RecyclerModel;
 
 import java.util.ArrayList;
 
-import static com.binni.ourvedic.Adapters.HinduAdapter.MyPREFERENCES;
+import static com.binni.ourvedic.Adapters.HinduAdapter.HinduPREFERENCES;
+
 
 public class HinduActivity extends AppCompatActivity {
     public static SharedPreferences.Editor editor;
@@ -33,7 +34,7 @@ public class HinduActivity extends AppCompatActivity {
 
 
         SharedPreferences sharedPref;
-        sharedPref =getSharedPreferences(MyPREFERENCES, MODE_PRIVATE);
+        sharedPref =getSharedPreferences(HinduPREFERENCES, MODE_PRIVATE);
 
         editor = sharedPref.edit();
 

@@ -15,6 +15,8 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 
+import com.binni.ourvedic.ChristianActivity;
+import com.binni.ourvedic.IslamActivity;
 import com.binni.ourvedic.Models.ChristanModel;
 
 import com.binni.ourvedic.R;
@@ -27,6 +29,13 @@ public class ChristanAdapter extends RecyclerView.Adapter<ChristanAdapter.viewHo
     ArrayList<ChristanModel> list;
     Context context;
 
+    public static final String ChristianPREFERENCES = "MyPrefs" ;
+    public static final String Bible = "BibleKey";
+    public static final String HolyWater = "ChadarKey";
+    public static final String JesusCross = "JesusCrossKey";
+    public static final String Candles = "CandlesKey";
+
+    public static int Bibleno=0,HolyWaterno=0,JesusCrossno=0,Candlesno=0;
 
     public ChristanAdapter(ArrayList<ChristanModel> list, Context context) {
         this.list = list;
@@ -67,6 +76,10 @@ public class ChristanAdapter extends RecyclerView.Adapter<ChristanAdapter.viewHo
                     builder.setPositiveButton("yes", (dialog, which) -> {
                         //by clicking on yes button the selected item should be added to cart
                         //TO-DO
+
+                        Bibleno++;
+                        ChristianActivity.editor.putString(Bible, Bibleno+"");
+                        ChristianActivity.editor.apply();
                         Toast.makeText(context, model.getText() + " added", Toast.LENGTH_SHORT).show();
                     });
                     builder.setNegativeButton("No", (dialog, which) -> builder.setOnCancelListener(dialog14 -> {
@@ -86,6 +99,9 @@ public class ChristanAdapter extends RecyclerView.Adapter<ChristanAdapter.viewHo
                     builder1.setPositiveButton("yes", (dialog, which) -> {
                         //by clicking on yes button the selected item should be added to cart
                         //TO-DO
+                        HolyWaterno++;
+                        ChristianActivity.editor.putString(HolyWater, HolyWaterno+"");
+                        ChristianActivity.editor.apply();
                         Toast.makeText(context, model.getText() + " added", Toast.LENGTH_SHORT).show();
                     });
                     builder1.setNegativeButton("No", (dialog, which) -> builder1.setOnCancelListener(dialog13 -> {
@@ -104,6 +120,9 @@ public class ChristanAdapter extends RecyclerView.Adapter<ChristanAdapter.viewHo
                     builder2.setPositiveButton("yes", (dialog, which) -> {
                         //by clicking on yes button the selected item should be added to cart
                         //TO-DO
+                        JesusCrossno++;
+                        ChristianActivity.editor.putString(JesusCross, JesusCrossno+"");
+                        ChristianActivity.editor.apply();
                         Toast.makeText(context, model.getText() + " added", Toast.LENGTH_SHORT).show();
                     });
                     builder2.setNegativeButton("No", (dialog, which) -> builder2.setOnCancelListener(dialog12 -> {
@@ -121,6 +140,9 @@ public class ChristanAdapter extends RecyclerView.Adapter<ChristanAdapter.viewHo
                     builder3.setPositiveButton("yes", (dialog, which) -> {
                         //by clicking on yes button the selected item should be added to cart
                         //TO-DO
+                        Candlesno++;
+                        ChristianActivity.editor.putString(Candles, Candlesno+"");
+                        ChristianActivity.editor.apply();
                         Toast.makeText(context, model.getText() + " added", Toast.LENGTH_SHORT).show();
                     });
                     builder3.setNegativeButton("no", (dialog, which) -> builder3.setOnCancelListener(dialog1 -> {
