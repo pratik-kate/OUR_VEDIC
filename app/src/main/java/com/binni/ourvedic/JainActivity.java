@@ -17,6 +17,7 @@ import com.binni.ourvedic.Models.SikhModel;
 import java.util.ArrayList;
 
 import static com.binni.ourvedic.Adapters.BuddhAdapter.BuddhPREFERENCES;
+import static com.binni.ourvedic.Adapters.JainAdapter.JainPREFERENCES;
 
 public class JainActivity extends AppCompatActivity {
     public static SharedPreferences.Editor editor;

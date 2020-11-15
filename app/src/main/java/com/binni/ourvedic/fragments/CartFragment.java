@@ -13,12 +13,6 @@ import com.binni.ourvedic.R;
 
 import static android.content.Context.MODE_PRIVATE;
 import static com.binni.ourvedic.Adapters.BuddhAdapter.*;
-import static com.binni.ourvedic.Adapters.BuddhAdapter.BuddhaStatue;
-import static com.binni.ourvedic.Adapters.BuddhAdapter.Diya;
-import static com.binni.ourvedic.Adapters.BuddhAdapter.Kundika;
-import static com.binni.ourvedic.Adapters.BuddhAdapter.Patra;
-import static com.binni.ourvedic.Adapters.BuddhAdapter.Shankh;
-import static com.binni.ourvedic.Adapters.BuddhAdapter.Vajra;
 import static com.binni.ourvedic.Adapters.ChristanAdapter.*;
 import static com.binni.ourvedic.Adapters.HinduAdapter.*;
 import static com.binni.ourvedic.Adapters.IslamAdapter.*;
@@ -29,6 +23,8 @@ import static com.binni.ourvedic.Adapters.JainAdapter.*;
 public class CartFragment extends Fragment {
 
 TextView demo;
+
+
     public CartFragment() {
         // Required empty public constructor
     }
