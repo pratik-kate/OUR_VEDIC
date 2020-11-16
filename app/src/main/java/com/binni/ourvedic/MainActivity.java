@@ -14,6 +14,7 @@ import android.widget.Toast;
 import com.binni.ourvedic.fragments.CartFragment;
 import com.binni.ourvedic.fragments.AboutFragment;
 import com.binni.ourvedic.fragments.ContactFragment;
+import com.binni.ourvedic.fragments.PanditFragment;
 import com.binni.ourvedic.fragments.ShopFragment;
 import com.google.android.material.navigation.NavigationView;
 
@@ -36,6 +37,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
 
         SharedPreferences pref = getSharedPreferences(HinduPREFERENCES, MODE_PRIVATE);
         SharedPreferences.Editor editor = pref.edit();
@@ -61,7 +63,6 @@ public class MainActivity extends AppCompatActivity {
         SharedPreferences.Editor editor5 = pref5.edit();
         editor5.clear();
         editor5.apply();
-
         nv = findViewById(R.id.nav);
         toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -81,39 +82,40 @@ public class MainActivity extends AppCompatActivity {
             switch (item.getItemId()) {
                 case R.id.shop:
                     ShopFragment shop1 = new ShopFragment();
-                    FragmentTransaction transaction12 = getSupportFragmentManager().beginTransaction();
-                    transaction12.replace(R.id.screen, shop1);
-                    transaction12.commit();
-
-
+                    FragmentTransaction transaction1 = getSupportFragmentManager().beginTransaction();
+                    transaction1.replace(R.id.screen, shop1);
+                    transaction1.commit();
                     dl.closeDrawer(GravityCompat.START);
                     break;
                 case R.id.cart:
                     CartFragment cart = new CartFragment();
-                    FragmentTransaction transaction1 = getSupportFragmentManager().beginTransaction();
-                    transaction1.replace(R.id.screen, cart);
-                    transaction1.commit();
+                    FragmentTransaction transaction2 = getSupportFragmentManager().beginTransaction();
+                    transaction2.replace(R.id.screen, cart);
+                    transaction2.commit();
+                    dl.closeDrawer(GravityCompat.START);
+                    break;
 
-                    Toast.makeText(MainActivity.this, "cart", Toast.LENGTH_SHORT).show();
+                case R.id.pandit:
+
+                    PanditFragment pandit = new PanditFragment();
+                    FragmentTransaction transaction3 = getSupportFragmentManager().beginTransaction();
+                    transaction3.replace(R.id.screen, pandit);
+                    transaction3.commit();
                     dl.closeDrawer(GravityCompat.START);
                     break;
                 case R.id.about:
                     AboutFragment about = new AboutFragment();
-                    FragmentTransaction transaction3 = getSupportFragmentManager().beginTransaction();
-                    transaction3.replace(R.id.screen, about);
-                    transaction3.commit();
-
-                    Toast.makeText(MainActivity.this, "about", Toast.LENGTH_SHORT).show();
+                    FragmentTransaction transaction4 = getSupportFragmentManager().beginTransaction();
+                    transaction4.replace(R.id.screen, about);
+                    transaction4.commit();
                     dl.closeDrawer(GravityCompat.START);
                     break;
 
                 case R.id.contact:
                     ContactFragment contact = new ContactFragment();
-                    FragmentTransaction transaction4 = getSupportFragmentManager().beginTransaction();
-                    transaction4.replace(R.id.screen, contact);
-                    transaction4.commit();
-
-                    Toast.makeText(MainActivity.this, "contact", Toast.LENGTH_SHORT).show();
+                    FragmentTransaction transaction5 = getSupportFragmentManager().beginTransaction();
+                    transaction5.replace(R.id.screen, contact);
+                    transaction5.commit();
                     dl.closeDrawer(GravityCompat.START);
                     break;
             }

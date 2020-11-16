@@ -10,7 +10,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.OURVEDIC">
-        <activity android:name=".JainActivity"></activity>
+        <activity android:name=".CheckoutActivity"></activity>
+        <activity android:name=".JainActivity" />
         <activity android:name=".BuddhActivity" />
         <activity android:name=".SikhActivity" />
         <activity android:name=".ChristianActivity" />
