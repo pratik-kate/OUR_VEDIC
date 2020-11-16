@@ -42,15 +42,15 @@ public class JainActivity extends AppCompatActivity {
 
 
 
-        items.add(new JainModel(R.drawable.fruits,"Fruits"));
+        items.add(new JainModel(R.drawable.fruits,"Fruits\t\tRs.70"));
 
-        items.add(new JainModel(R.drawable.gangajal,"Gangajal"));
-        items.add(new JainModel(R.drawable.scandalwood,"Scandal Wood"));
-        items.add(new JainModel(R.drawable.gulabjal,"GulabJal"));
-        items.add(new JainModel(R.drawable.kumkum,"Kumkum"));
-        items.add(new JainModel(R.drawable.nariyal,"Nariyal"));
-        items.add(new JainModel(R.drawable.diya,"Diya"));
-        items.add(new JainModel(R.drawable.akshat,"Akshat"));
+        items.add(new JainModel(R.drawable.gangajal,"Gangajal\t\tRs.50"));
+        items.add(new JainModel(R.drawable.scandalwood,"Scandal Wood\t\tRs.150"));
+        items.add(new JainModel(R.drawable.gulabjal,"GulabJal\t\tRs.60"));
+        items.add(new JainModel(R.drawable.kumkum,"Kumkum\t\tRs.30"));
+        items.add(new JainModel(R.drawable.nariyal,"Nariyal\t\tRs.25"));
+        items.add(new JainModel(R.drawable.diya,"Diya\t\tRs.40"));
+        items.add(new JainModel(R.drawable.akshat,"Akshat\t\tRs.50"));
 
 
 

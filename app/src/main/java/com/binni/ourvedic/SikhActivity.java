@@ -38,10 +38,10 @@ public class SikhActivity extends AppCompatActivity {
 
 
 
-        items.add(new SikhModel(R.drawable.bhojpatra,"Bhojpatra"));
-        items.add(new SikhModel(R.drawable.janeu,"Janeu"));
-        items.add(new SikhModel(R.drawable.kalash,"Kalsh"));
-        items.add(new SikhModel(R.drawable.supari,"Supari"));
+        items.add(new SikhModel(R.drawable.bhojpatra,"Bhojpatra\t\tRs.70"));
+        items.add(new SikhModel(R.drawable.janeu,"Janeu\t\tRs.50"));
+        items.add(new SikhModel(R.drawable.kalash,"Kalsh\t\tRs.100"));
+        items.add(new SikhModel(R.drawable.supari,"Supari\t\tRs.20"));
 
 
 

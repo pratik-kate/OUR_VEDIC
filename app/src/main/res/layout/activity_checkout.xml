@@ -75,7 +75,7 @@
             android:id="@+id/btnconfirm"
             android:layout_width="150dp"
             android:layout_height="54dp"
-            android:background="@drawable/card_background"
+            android:background="@color/white"
             android:text="@string/confirm"
             android:textColor="#FF6460"
             app:layout_constraintBottom_toBottomOf="parent"

@@ -12,6 +12,8 @@
         android:layout_height="65dp"
         android:layout_marginTop="20dp"
         android:elevation="10dp"
+        android:paddingStart="7dp"
+        android:paddingEnd="10dp"
         android:scaleType="centerInside"
         app:srcCompat="@drawable/logo"
         tools:ignore="VectorDrawableCompat" />
@@ -21,6 +23,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
         android:layout_marginTop="20dp"
+        android:fontFamily="@font/aclonica"
         android:text="@string/welcome"
         android:textColor="@color/white"
         android:textSize="30sp" />

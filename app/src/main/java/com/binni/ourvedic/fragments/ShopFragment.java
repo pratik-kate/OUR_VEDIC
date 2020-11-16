@@ -1,19 +1,23 @@
 package com.binni.ourvedic.fragments;
 
+
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
+
 import android.widget.Toast;
 
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.binni.ourvedic.Adapters.RecyclerAdapter;
 import com.binni.ourvedic.Models.RecyclerModel;
 import com.binni.ourvedic.R;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.ArrayList;
 
@@ -21,6 +25,7 @@ import java.util.ArrayList;
 public class ShopFragment extends Fragment {
 
     RecyclerView list;
+    FloatingActionButton cart;
     public ShopFragment() {
         // Required empty public constructor
     }
@@ -31,7 +36,7 @@ public class ShopFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_shop, container, false);
         list = view.findViewById(R.id.list);
-
+        cart = view.findViewById(R.id.cartfab);
         ArrayList<RecyclerModel> items = new ArrayList<>();
 
         //adding items
@@ -49,6 +54,22 @@ public class ShopFragment extends Fragment {
         list.setLayoutManager(layout);
 
 
+        //FAB cart
+
+        cart.setOnClickListener(v -> {
+            Fragment fragment = new CartFragment();
+            FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
+            FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+            fragmentTransaction.replace(R.id.screen, fragment);
+            fragmentTransaction.addToBackStack(null);
+            fragmentTransaction.commit();
+        });
+
+        cart.setOnLongClickListener(v -> {
+
+            Toast.makeText(getContext(), "Cart", Toast.LENGTH_SHORT).show();
+            return false;
+        });
         return view;
     }
 

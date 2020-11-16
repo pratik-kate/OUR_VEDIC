@@ -38,11 +38,11 @@ public class ChristianActivity extends AppCompatActivity {
         editor = sharedPrefIChristian.edit();
 
 
-            items.add(new ChristanModel(R.drawable.bible,"Bible"));
+            items.add(new ChristanModel(R.drawable.bible,"Bible\t\tRs.150"));
 
-            items.add(new ChristanModel(R.drawable.holywater,"Holy Water"));
-            items.add(new ChristanModel(R.drawable.jesuscros,"Jesus Cross"));
-             items.add(new ChristanModel(R.drawable.candles,"Candles"));
+            items.add(new ChristanModel(R.drawable.holywater,"Holy Water\t\tRs.70"));
+            items.add(new ChristanModel(R.drawable.jesuscros,"Jesus Cross\t\tRs.50"));
+             items.add(new ChristanModel(R.drawable.candles,"Candles\t\tRs.60"));
 
 
 

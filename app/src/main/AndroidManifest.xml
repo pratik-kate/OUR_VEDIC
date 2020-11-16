@@ -17,6 +17,7 @@
         <activity android:name=".ChristianActivity" />
         <activity android:name=".IslamActivity" />
         <activity android:name=".HinduActivity" />
+
         <activity android:name=".SplashScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

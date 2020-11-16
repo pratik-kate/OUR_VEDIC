@@ -72,7 +72,7 @@ public class BuddhAdapter extends RecyclerView.Adapter<BuddhAdapter.viewHolder>{
                 case 0:
 
                     AlertDialog.Builder builder = new AlertDialog.Builder(v.getContext());
-                    builder.setTitle(model.getText());
+                    builder.setTitle("BuddhaStatue");
                     builder.setMessage("You want to add this item in cart");
                     builder.setPositiveButton("yes", (dialog, which) -> {
                         //by clicking on yes button the selected item should be added to cart
@@ -81,7 +81,7 @@ public class BuddhAdapter extends RecyclerView.Adapter<BuddhAdapter.viewHolder>{
                         BuddhaStatueno++;
                         BuddhActivity.editor.putString(BuddhaStatue, BuddhaStatueno+"");
                         BuddhActivity.editor.apply();
-                        Toast.makeText(context, model.getText() +" added", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(context, "Buddha Statue added", Toast.LENGTH_SHORT).show();
                     });
                     builder.setNegativeButton("No", (dialog, which) -> builder.setOnCancelListener(dialog16 -> {
                         //by clicking no the alert box will disappear
@@ -95,7 +95,7 @@ public class BuddhAdapter extends RecyclerView.Adapter<BuddhAdapter.viewHolder>{
                 case 1:
 
                     AlertDialog.Builder builder1 = new AlertDialog.Builder(v.getContext());
-                    builder1.setTitle(model.getText());
+                    builder1.setTitle("Diya");
                     builder1.setMessage("you want to add this item in cart");
                     builder1.setPositiveButton("yes", (dialog, which) -> {
                         //by clicking on yes button the selected item should be added to cart
@@ -104,7 +104,7 @@ public class BuddhAdapter extends RecyclerView.Adapter<BuddhAdapter.viewHolder>{
                         Diyano++;
                         BuddhActivity.editor.putString(Diya, Diyano+"");
                         BuddhActivity.editor.apply();
-                        Toast.makeText(context, model.getText() +" added", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(context, "Diya added", Toast.LENGTH_SHORT).show();
                     });
                     builder1.setNegativeButton("No", (dialog, which) -> builder1.setOnCancelListener(dialog15 -> {
                         //by clicking no the alert box will disappear
@@ -117,7 +117,7 @@ public class BuddhAdapter extends RecyclerView.Adapter<BuddhAdapter.viewHolder>{
                 case 2:
 
                     AlertDialog.Builder builder2 = new AlertDialog.Builder(v.getContext());
-                    builder2.setTitle(model.getText());
+                    builder2.setTitle("Kundika");
                     builder2.setMessage("you want to add this item in your cart");
                     builder2.setPositiveButton("yes", (dialog, which) -> {
                         //by clicking on yes button the selected item should be added to cart
@@ -126,7 +126,7 @@ public class BuddhAdapter extends RecyclerView.Adapter<BuddhAdapter.viewHolder>{
                         Kundikano++;
                         BuddhActivity.editor.putString(Kundika, Kundikano+"");
                         BuddhActivity.editor.apply();
-                        Toast.makeText(context, model.getText() +" added", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(context, "Kundika added", Toast.LENGTH_SHORT).show();
                     });
                     builder2.setNegativeButton("No", (dialog, which) -> builder2.setOnCancelListener(dialog14 -> {
                         //by clicking no the alert box will disappear
@@ -138,7 +138,7 @@ public class BuddhAdapter extends RecyclerView.Adapter<BuddhAdapter.viewHolder>{
 
                 case 3:
                     AlertDialog.Builder builder3 = new AlertDialog.Builder(v.getContext());
-                    builder3.setTitle(model.getText());
+                    builder3.setTitle("Patra");
                     builder3.setMessage("You want to add this item in cart");
                     builder3.setPositiveButton("yes", (dialog, which) -> {
                         //by clicking on yes button the selected item should be added to cart
@@ -147,7 +147,7 @@ public class BuddhAdapter extends RecyclerView.Adapter<BuddhAdapter.viewHolder>{
                         Patrano++;
                         BuddhActivity.editor.putString(Patra, Patrano+"");
                         BuddhActivity.editor.apply();
-                        Toast.makeText(context, model.getText() +" added", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(context, "Patra added", Toast.LENGTH_SHORT).show();
                     });
                     builder3.setNegativeButton("no", (dialog, which) -> builder3.setOnCancelListener(dialog13 -> {
                         //by clicking no the alert box will disappear
@@ -160,7 +160,7 @@ public class BuddhAdapter extends RecyclerView.Adapter<BuddhAdapter.viewHolder>{
 
                 case 4:
                     AlertDialog.Builder builder4 = new AlertDialog.Builder(v.getContext());
-                    builder4.setTitle(model.getText());
+                    builder4.setTitle("Shankh");
                     builder4.setMessage("You want to add this item in Cart");
                     builder4.setPositiveButton("yes", (dialog, which) -> {
                         //by clicking on yes button the selected item should be added to cart
@@ -169,7 +169,7 @@ public class BuddhAdapter extends RecyclerView.Adapter<BuddhAdapter.viewHolder>{
                         Shankhno++;
                         BuddhActivity.editor.putString(Shankh, Shankhno+"");
                         BuddhActivity.editor.apply();
-                        Toast.makeText(context, model.getText() +" added", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(context, "Shankh added", Toast.LENGTH_SHORT).show();
                     });
                     builder4.setNegativeButton("no", (dialog, which) -> builder4.setOnCancelListener(dialog12 -> {
                         //by clicking no the alert box will disappear
@@ -183,7 +183,7 @@ public class BuddhAdapter extends RecyclerView.Adapter<BuddhAdapter.viewHolder>{
 
                 case 5:
                     AlertDialog.Builder builder5 = new AlertDialog.Builder(v.getContext());
-                    builder5.setTitle(model.getText());
+                    builder5.setTitle("Vajra");
                     builder5.setMessage("you want to add this item in Cart");
                     builder5.setPositiveButton("yes", (dialog, which) -> {
                         //by clicking on yes button the selected item should be added to cart
@@ -192,7 +192,7 @@ public class BuddhAdapter extends RecyclerView.Adapter<BuddhAdapter.viewHolder>{
                         Vajrano++;
                         BuddhActivity.editor.putString(Vajra, Vajrano+"");
                         BuddhActivity.editor.apply();
-                        Toast.makeText(context, model.getText() +" added", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(context, "Vajra added", Toast.LENGTH_SHORT).show();
                     });
                     builder5.setNegativeButton("no", (dialog, which) -> builder5.setOnCancelListener(dialog1 -> {
                         //by clicking no the alert box will disappear

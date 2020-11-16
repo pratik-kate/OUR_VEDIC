@@ -22,7 +22,7 @@
             android:fontFamily="@font/aclonica"
             android:gravity="center"
             android:text="@string/shop_by_religion"
-            android:textSize="24sp" />
+            android:textSize="30sp" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/list"
@@ -30,5 +30,19 @@
             android:layout_height="match_parent"
             android:animateLayoutChanges="false"
             tools:listitem="@layout/design" />
+
     </LinearLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/cartfab"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|right"
+        android:layout_marginEnd="22dp"
+        android:layout_marginBottom="22dp"
+        android:background="@drawable/background"
+        android:clickable="true"
+        android:src="@drawable/ic_baseline_shopping_cart_24"
+        app:backgroundTint="@color/main" />
+
 </FrameLayout>
