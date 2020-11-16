@@ -44,8 +44,8 @@ public class PanditFragment extends Fragment {
         items.add(new PanditModel(R.drawable.ic_baseline_person_outline_24,"Mohamed Shafi","Islam","Hydrabad","8423655977"));
         items.add(new PanditModel(R.drawable.ic_baseline_person_outline_24,"Father Gregor","Christan","Banglore","9523577155"));
         items.add(new PanditModel(R.drawable.ic_baseline_person_outline_24,"Guru Tej","Sikh","Panjab","9753566011"));
-        items.add(new PanditModel(R.drawable.ic_baseline_person_outline_24,"Arjun","Buddh","Mumabi","8560144977"));
-        items.add(new PanditModel(R.drawable.ic_baseline_person_outline_24,"Nathuram Premi","Jain","Rajstan","9531466822"));
+        items.add(new PanditModel(R.drawable.ic_baseline_person_outline_24,"Arjun","Buddh","Mumbai","8560144977"));
+        items.add(new PanditModel(R.drawable.ic_baseline_person_outline_24,"Nathuram Premi","Jain","Rajastan","9531466822"));
 
 
         PanditAdapter adapter = new PanditAdapter(items,getContext());
