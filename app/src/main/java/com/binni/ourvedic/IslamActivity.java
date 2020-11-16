@@ -38,9 +38,9 @@ public class IslamActivity extends AppCompatActivity {
 
         editor = sharedPrefIslam.edit();
 
-        items.add(new IslamModel(R.drawable.allahframe,"Allah Frame"));
-        items.add(new IslamModel(R.drawable.chadar,"Chadar"));
-        items.add(new IslamModel(R.drawable.quran,"Quran"));
+        items.add(new IslamModel(R.drawable.allahframe,"Allah Frame\t\tRs.200"));
+        items.add(new IslamModel(R.drawable.chadar,"Chadar\t\tRs.100"));
+        items.add(new IslamModel(R.drawable.quran,"Quran\t\tRs.150"));
 
 
 

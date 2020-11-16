@@ -71,7 +71,7 @@ public class ChristanAdapter extends RecyclerView.Adapter<ChristanAdapter.viewHo
                 case 0:
 
                     AlertDialog.Builder builder = new AlertDialog.Builder(v.getContext());
-                    builder.setTitle(model.getText());
+                    builder.setTitle("Bible");
                     builder.setMessage("You want to add this item in cart");
                     builder.setPositiveButton("yes", (dialog, which) -> {
                         //by clicking on yes button the selected item should be added to cart
@@ -80,7 +80,7 @@ public class ChristanAdapter extends RecyclerView.Adapter<ChristanAdapter.viewHo
                         Bibleno++;
                         ChristianActivity.editor.putString(Bible, Bibleno+"");
                         ChristianActivity.editor.apply();
-                        Toast.makeText(context, model.getText() + " added", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(context,  "Bible added", Toast.LENGTH_SHORT).show();
                     });
                     builder.setNegativeButton("No", (dialog, which) -> builder.setOnCancelListener(dialog14 -> {
                         //by clicking no the alert box will disappear
@@ -94,7 +94,7 @@ public class ChristanAdapter extends RecyclerView.Adapter<ChristanAdapter.viewHo
                 case 1:
 
                     AlertDialog.Builder builder1 = new AlertDialog.Builder(v.getContext());
-                    builder1.setTitle(model.getText());
+                    builder1.setTitle("Holly Water");
                     builder1.setMessage("you want to add this item in cart");
                     builder1.setPositiveButton("yes", (dialog, which) -> {
                         //by clicking on yes button the selected item should be added to cart
@@ -102,7 +102,7 @@ public class ChristanAdapter extends RecyclerView.Adapter<ChristanAdapter.viewHo
                         HolyWaterno++;
                         ChristianActivity.editor.putString(HolyWater, HolyWaterno+"");
                         ChristianActivity.editor.apply();
-                        Toast.makeText(context, model.getText() + " added", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(context, "HollyWater added", Toast.LENGTH_SHORT).show();
                     });
                     builder1.setNegativeButton("No", (dialog, which) -> builder1.setOnCancelListener(dialog13 -> {
                         //by clicking no the alert box will disappear
@@ -115,7 +115,7 @@ public class ChristanAdapter extends RecyclerView.Adapter<ChristanAdapter.viewHo
                 case 2:
 
                     AlertDialog.Builder builder2 = new AlertDialog.Builder(v.getContext());
-                    builder2.setTitle(model.getText());
+                    builder2.setTitle("JesusCross");
                     builder2.setMessage("you want to add this item in your cart");
                     builder2.setPositiveButton("yes", (dialog, which) -> {
                         //by clicking on yes button the selected item should be added to cart
@@ -123,7 +123,7 @@ public class ChristanAdapter extends RecyclerView.Adapter<ChristanAdapter.viewHo
                         JesusCrossno++;
                         ChristianActivity.editor.putString(JesusCross, JesusCrossno+"");
                         ChristianActivity.editor.apply();
-                        Toast.makeText(context, model.getText() + " added", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(context,  "Jesus Cross added", Toast.LENGTH_SHORT).show();
                     });
                     builder2.setNegativeButton("No", (dialog, which) -> builder2.setOnCancelListener(dialog12 -> {
                         //by clicking no the alert box will disappear
@@ -135,7 +135,7 @@ public class ChristanAdapter extends RecyclerView.Adapter<ChristanAdapter.viewHo
 
                 case 3:
                     AlertDialog.Builder builder3 = new AlertDialog.Builder(v.getContext());
-                    builder3.setTitle(model.getText());
+                    builder3.setTitle("Candles");
                     builder3.setMessage("You want to add this item in cart");
                     builder3.setPositiveButton("yes", (dialog, which) -> {
                         //by clicking on yes button the selected item should be added to cart
@@ -143,7 +143,7 @@ public class ChristanAdapter extends RecyclerView.Adapter<ChristanAdapter.viewHo
                         Candlesno++;
                         ChristianActivity.editor.putString(Candles, Candlesno+"");
                         ChristianActivity.editor.apply();
-                        Toast.makeText(context, model.getText() + " added", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(context, "Candles added", Toast.LENGTH_SHORT).show();
                     });
                     builder3.setNegativeButton("no", (dialog, which) -> builder3.setOnCancelListener(dialog1 -> {
                         //by clicking no the alert box will disappear

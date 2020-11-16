@@ -34,4 +34,5 @@
             android:animateLayoutChanges="false"
             tools:listitem="@layout/hindu_design" />
     </LinearLayout>
+
 </FrameLayout>

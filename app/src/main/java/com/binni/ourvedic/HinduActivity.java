@@ -41,15 +41,15 @@ public class HinduActivity extends AppCompatActivity {
 
 
 
-        items.add(new HinduModel(R.drawable.fruits,"Fruits"));
-        items.add(new HinduModel(R.drawable.dhoop,"Dhup"));
-        items.add(new HinduModel(R.drawable.agarbatti,"AgarBatti"));
-        items.add(new HinduModel(R.drawable.gulabjal,"GulabJal"));
-        items.add(new HinduModel(R.drawable.kumkum,"Kumkum"));
-        items.add(new HinduModel(R.drawable.nariyal,"Nariyal"));
-        items.add(new HinduModel(R.drawable.camphor,"Camphor"));
-       // items.add(new HinduModel(R.drawable.diya,"Diya"));
-        items.add(new HinduModel(R.drawable.flowers,"Flowers"));
+        items.add(new HinduModel(R.drawable.fruits,"Fruits\t\tRs.70"));
+        items.add(new HinduModel(R.drawable.dhoop,"Dhup\t\tRs.50"));
+        items.add(new HinduModel(R.drawable.agarbatti,"AgarBatti\t\tRs.40"));
+        items.add(new HinduModel(R.drawable.gulabjal,"GulabJal\t\tRs.80"));
+        items.add(new HinduModel(R.drawable.kumkum,"Kumkum\t\tRs.30"));
+        items.add(new HinduModel(R.drawable.nariyal,"Nariyal\t\tRs.25"));
+        items.add(new HinduModel(R.drawable.camphor,"Camphor\t\tRs.20"));
+       // items.add(new HinduModel(R.drawable.diya,"Diya\t\tRs30"));
+        items.add(new HinduModel(R.drawable.flowers,"Flowers\t\tRs.60"));
 
 
 

@@ -64,42 +64,42 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.viewHo
                 case 0:
 
                     intent =  new Intent(context, HinduActivity.class);
-                    Toast.makeText(context, "Hindu Toast ", Toast.LENGTH_LONG).show();
+                    //Toast.makeText(context, "Hindu Toast ", Toast.LENGTH_LONG).show();
                     break;
 
                 case 1:
 
                     intent =  new Intent(context, IslamActivity.class);
-                    Toast.makeText(context, "Islam Toast ", Toast.LENGTH_LONG).show();
+                   // Toast.makeText(context, "Islam Toast ", Toast.LENGTH_LONG).show();
                     break;
 
                 case 2:
 
                     intent =  new Intent(context, ChristianActivity.class);
-                    Toast.makeText(context, "Christian Toast ", Toast.LENGTH_LONG).show();
+                   // Toast.makeText(context, "Christian Toast ", Toast.LENGTH_LONG).show();
                     break;
 
                 case 3:
 
                     intent =  new Intent(context, SikhActivity.class);
-                    Toast.makeText(context, "Sikh Toast ", Toast.LENGTH_LONG).show();
+                    //Toast.makeText(context, "Sikh Toast ", Toast.LENGTH_LONG).show();
                     break;
 
                 case 4:
 
                     intent =  new Intent(context, BuddhActivity.class);
-                    Toast.makeText(context, "Buddh Toast ", Toast.LENGTH_LONG).show();
+                   // Toast.makeText(context, "Buddh Toast ", Toast.LENGTH_LONG).show();
                     break;
 
                 case 5:
                     intent =  new Intent(context, JainActivity.class);
-                    Toast.makeText(context, "Jain Toast ", Toast.LENGTH_LONG).show();
+                    //Toast.makeText(context, "Jain Toast ", Toast.LENGTH_LONG).show();
                     break;
 
 
                 default:
                     intent =  new Intent(context, HinduActivity.class);
-                    Toast.makeText(context, "Hindu Toast ", Toast.LENGTH_LONG).show();
+                    //Toast.makeText(context, "Hindu Toast ", Toast.LENGTH_LONG).show();
                     break;
             }
             context.startActivity(intent);
